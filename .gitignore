@@ -1,0 +1,32 @@
+# Dependencies
+node_modules/
+target/
+
+# Anchor
+.anchor/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Archives & Backups
+.archive/
+*.bak
+*.backup
+
+# Test data (contains secrets)
+tests/*.json
+!tests/package.json
+
+# Wallet (NEVER commit)
+*-wallet.json
+*.json.bak
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log

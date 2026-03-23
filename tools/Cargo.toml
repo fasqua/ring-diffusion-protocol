@@ -1,0 +1,22 @@
+[package]
+name = "rdp-tools"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "gen-bulletproof"
+path = "src/gen_bulletproof.rs"
+
+[[bin]]
+name = "gen-test-data"
+path = "src/gen_test_data.rs"
+
+[dependencies]
+rdp-crypto = { path = "../crates/rdp-crypto" }
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+hex = "0.4"
+bs58 = "0.5"
+rand = "0.8"
+clap = { version = "4.0", features = ["derive"] }
+curve25519-dalek = "4.1"

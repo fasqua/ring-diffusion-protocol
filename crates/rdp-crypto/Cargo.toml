@@ -1,0 +1,70 @@
+[package]
+name = "rdp-crypto"
+version = "0.1.0"
+edition = "2021"
+description = "Cryptographic primitives for Ring Diffusion Protocol (off-chain signing)"
+license = "MIT"
+
+[features]
+default = ["std"]
+std = ["rand", "alloc"]
+alloc = []
+
+[dependencies]
+serde_json = "1.0"
+# Curve25519 operations
+curve25519-dalek = { version = "4.1", default-features = false, features = ["digest", "zeroize", "alloc"] }
+
+# Hashing
+sha2 = { version = "0.10", default-features = false }
+
+# Serialization
+borsh = { version = "1.5", default-features = false, features = ["derive"] }
+
+# Random number generation
+rand_core = { version = "0.6", default-features = false }
+rand = { version = "0.8", optional = true }
+
+# Zeroize sensitive data
+zeroize = { version = "1.8", default-features = false, features = ["derive"] }
+hex = { version = "0.4", features = ["std"] }
+
+[dev-dependencies]
+rand = "0.8"
+hex = "0.4"
+
+[[bin]]
+name = "test_basepoint"
+path = "src/bin/test_basepoint.rs"
+
+[[bin]]
+name = "test_hash_to_point"
+path = "src/bin/test_hash_to_point.rs"
+
+[[bin]]
+name = "test_scalar_methods"
+path = "src/bin/test_scalar_methods.rs"
+
+[[bin]]
+name = "test_curve_ops"
+path = "src/bin/test_curve_ops.rs"
+
+[[bin]]
+name = "debug_verify"
+path = "src/bin/debug_verify.rs"
+
+[[bin]]
+name = "debug_challenge"
+path = "src/bin/debug_challenge.rs"
+
+[[bin]]
+name = "debug_verify2"
+path = "src/bin/debug_verify2.rs"
+
+[[bin]]
+name = "check_point"
+path = "src/bin/check_point.rs"
+
+[[bin]]
+name = "test_reduce_compare"
+path = "src/bin/test_reduce_compare.rs"
