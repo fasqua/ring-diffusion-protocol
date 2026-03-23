@@ -1,13 +1,12 @@
 <div align="center">
 
-# 🌀 Ring Diffusion Protocol (RDP)
+# Ring Diffusion Protocol (RDP)
 
 ### Privacy-Preserving Transactions on Solana — Without Trusted Setup
 
 [![Solana](https://img.shields.io/badge/Solana-Devnet-blueviolet?style=for-the-badge&logo=solana)](https://solana.com)
 [![Rust](https://img.shields.io/badge/Rust-1.70+-orange?style=for-the-badge&logo=rust)](https://rust-lang.org)
 [![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)](LICENSE)
-[![Status](https://img.shields.io/badge/Status-Unaudited-red?style=for-the-badge)]()
 
 ---
 
